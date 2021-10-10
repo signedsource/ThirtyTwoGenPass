@@ -1,0 +1,22 @@
+{
+  "name": "thirtytwogenpass",
+  "version": "1.0.0",
+  "description": "A Password Generator.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signedsource/ThirtyTwoGenPass.git"
+  },
+  "author": "SignedSource Team",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/signedsource/ThirtyTwoGenPass/issues"
+  },
+  "homepage": "https://github.com/signedsource/ThirtyTwoGenPass#readme",
+  "dependencies": {
+    "figlet": "^1.5.2"
+  }
+}
