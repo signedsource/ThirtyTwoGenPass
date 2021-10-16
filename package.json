@@ -1,8 +1,8 @@
 {
   "name": "thirtytwogenpass",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A Password Generator.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "node src/app.js"
   },
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/signedsource/ThirtyTwoGenPass#readme",
   "dependencies": {
-    "figlet": "^1.5.2"
+    "axios": "^0.23.0",
+    "carden": "^4.0.0",
+    "chalk": "^4.1.2",
+    "figlet": "^1.5.2",
+    "keypress": "^0.2.1"
   }
 }
