@@ -3,6 +3,7 @@ const keypress = require('keypress');
 const chalk = require('chalk');
 const genPass = require('./genpass');
 const checkUpdate = require('./checkupdate');
+const carden = require('carden');
 
 logo();
 
@@ -13,16 +14,19 @@ setTimeout(() => {
 const app = () => {
     console.clear();
 
-    console.log(chalk.green('❯ Press P to access.')); //This will probably improve
-    console.log('');
-    console.log(chalk.red('❯ Press X to exit.'));
+    console.log(carden('❯ Press P to access.',
+        '❯ Press X to exit.', {
+        header: {
+            backgroundColor: 'green'
+        }
+    }));
 
     keypress(process.stdin);
 
     process.stdin.on('keypress', function (ch, key) {
         if (key.name == 'p') {
             genPass();
-        } else if(key.name == 'x'){
+        } else if (key.name == 'x') {
             console.clear();
             process.stdin.pause();
         }

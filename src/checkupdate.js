@@ -66,9 +66,7 @@ const checkUpdate = () => {
 
     process.stdin.on('keypress', function (ch, key) {
         if (key.name == 'y') {
-            const app = require('./app');
-            update(); //todo: building this part
-            app();
+            update(); 
         } else if (key.name == 'n') {
             const app = require('./app');
             app();

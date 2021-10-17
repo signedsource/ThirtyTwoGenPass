@@ -21,13 +21,18 @@ const update = async () => {
                     console.log(chalk.green("Updated! Restart the app"));
                     process.exit();
                 }, 100);
+                
             } else if (response.data.version == version.version) {
                 console.clear();
                 const loading = require("loading-indicator"); 
 
-                const loadingApp = loading.start("Loading the app...");
+                const loadingApp = loading.start("No none new version...");
 
                 setTimeout(() => {
+                    const app = require('./app');
+
+                    app();
+
                     loading.stop(loadingApp);
                 }, 1600);
             } else {
